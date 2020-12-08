@@ -1,6 +1,36 @@
-{% extends "base.html" %}
+{% extends "base.html"%}
 {% load static %}
+{% block extra_title %}- Home{% endblock %}
+{% block content%}
+<!--Hero image and buttons-->
+{% include 'landing/includes/hero_img_and_buttons.html' %}
 
-{% block content %}
-	<h1 class="display-4 text-success">It works</h1>
+
+<!--About section-->
+{% include 'landing/includes/landing_about.html' %}
+
+<!--Quote section-->
+{% include 'landing/includes/quote_section.html' %}
+
+<!--Services section-->
+{% include 'landing/includes/services_section.html' %}
+
+<!--History section-->
+{% include 'landing/includes/history_section.html' %}
+
+
+<!--Products shop section-->
+{% include 'landing/includes/products_shop_section.html' %}
+
+
+<!--Events section-->
+{% include 'landing/includes/landing_events.html' %}
+
+
+<!--Review section-->
+{% include 'landing/includes/landing_reviews.html' %}
+
+<!--Contact section-->
+{% include 'landing/includes/landing_contact.html' %}
+
 {% endblock %}
