@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +70,31 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Uses username OR email as authentication methods
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# Controls there is an email entered
+ACCOUNT_EMAIL_REQUIRED = True
+# Controls the email is valid
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# Makes user insert email twice when registering certifying it is correct
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+# Requires username is minimum 4 characters
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'feeling_good_now.wsgi.application'
 
