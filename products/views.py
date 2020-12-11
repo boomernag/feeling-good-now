@@ -14,3 +14,13 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def services(request):
+    """ A view to display all of the services"""
+    services = Product.objects.filter(is_a_service=True)
+    context = {
+        'services': services,
+    }
+
+    return render(request, 'products/services.html', context)
