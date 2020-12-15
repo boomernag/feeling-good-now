@@ -18,7 +18,8 @@ def all_products(request):
 
 def services(request):
     """ A view to display all of the services"""
-    services = Product.objects.filter(is_a_service=True)
+    services = Product.objects.all()
+    
     context = {
         'services': services,
     }
