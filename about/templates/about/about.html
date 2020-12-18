@@ -3,19 +3,27 @@
 {% block extra_title %}- About{% endblock %}
 {% block content%}
 
-<div class="container-xl my-3 my-md-5">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Breadcrumb
+        </div>
+    </div>
+</div>
+
+<div class="container my-3 my-md-5"">
     <!--About Heading-->
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">About</h2>
-            <hr class="w-50 mb-1">
+        <div class="col-12 text-center">
+            <h1 class="uppercase main-heading">About us</h1>
+            <hr>
         </div>
     </div>
     <!--About- Main sections-->
-    <div class="row text-center mt-3 mt-md-5 d-flex align-items-center">
+    <div class="container">
         {% include 'about/includes/who_we_are.html' %} 
-        {% include 'about/includes/our_knowledge.html' %}    
+        {% include 'about/includes/our_knowledge.html' %}  
+        {% include 'about/includes/our_motto.html' %}
     </div>
-    {% include 'about/includes/our_motto.html' %}
 </div>
 {% endblock %}

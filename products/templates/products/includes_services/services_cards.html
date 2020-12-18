@@ -21,7 +21,7 @@
                 <h5 class="card-title text-center uppercase">{{ service.name }}</h5>
                 <p class="card-text">{{ service.description }}</p>
                 <div class="d-flex justify-content-between">
-                    <p class="card-text font-weight-bold">
+                    <p class="card-text">
                         <i class="fas fa-euro-sign mr-1"></i>{{ service.price}}
                     </p>
                     <a href="{% url 'service_details' service.id %}" class="btn btn-dark">Learn More</a>

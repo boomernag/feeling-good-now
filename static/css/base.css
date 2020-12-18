@@ -9,6 +9,30 @@ body {
     font-family: 'Lato';
 }
 
+/* ------------- landing carousel */
+
+#hero-carousel {
+    min-height: 300px;
+    min-width: 100%;
+}
+
+#hero-carousel img {
+    max-height: 600px;
+    min-width: 100%;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}
+
+.item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -26,27 +50,6 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
 .text-black {
     color: black !important;
 }
@@ -58,115 +61,6 @@ body {
 .bg-black {
     background: #000 !important;
 }
-
-/* ----------------------- Contact Form */
-/* import compass */
-@import "compass";
-
-/* contact form */
-.contact-form{
-    margin-top: 30px;
-    .input-block{
-        background-color: rgba(white, .8);
-        border: solid 1px $primary-color;
-        width: 100%;
-        height: 60px;
-        padding: 25px;
-        position: relative;
-        margin-bottom: 20px;
-        @include transition(all 0.3s ease-out);
-        &.focus{
-            background-color: $form-bg;
-            border: solid 1px darken($primary-color, 10%);
-        }
-        &.textarea{
-            height: auto;
-            .form-control{
-                height: auto;
-                resize: none;
-            }
-        }
-        label{
-            position: absolute;
-            left: 25px;
-            top: 25px;
-            display: block;
-            margin: 0;
-            font-weight: 300;
-            z-index: 1;
-            color: $secondary-color;
-            font-size: 18px;
-            line-height: 10px;
-        }
-        .form-control{
-            background-color: transparent;
-            padding: 0;
-            border: none;
-            @include border-radius(0);
-            @include box-shadow(none);
-            height: auto;
-            position: relative;
-            z-index: 2;
-            font-size: 18px;
-            color: $secondary-color;
-        }
-        .form-control:focus{
-            label{
-                top: 0;
-            }
-        }
-    }
-    .square-button{
-        background-color: rgba(white, .8);
-        color: darken($primary-color, 10%);
-        font-size: 26px;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-align: center;
-        @include border-radius(2px);
-        @include transition(all 0.3s ease);
-        padding: 0 60px;
-        height: 60px;
-        border: none;
-        width: 100%;
-        &:hover,
-        &:focus{
-            background-color: white;
-        }
-    }
-}
-
-/* tablet and above devices */
-@media (min-width: 768px) { 
-  .contact-wrap{
-    width: 60%;
-    margin: auto;
-  }
-}
-
-.contact-wrap{
-  padding: 15px;
-}
-
-h1{
-  background-color: white;
-  color: lighten($primary-color, 10%);
-  padding: 40px;
-  margin: 0 0 50px;
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  small{
-    font-size: 18px;
-    display: block;
-    text-transform: none;
-    font-weight: 300;
-    margin-top: 10px;
-    color: lighten($primary-color, 10%);
-  }
-}
-
 
 /* ----------------------- Media Queries */
 
