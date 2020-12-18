@@ -7,16 +7,19 @@
         <div class="row">
             <div class="col-12 text-center mt-2">
                 <h1 class="uppercase main-heading products-heading">{{ product.name }}</h1>
-                <div class="image-container my-5">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
+                <div class="row  my-3 my-md-5">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2 mb-lg-5">
+                    {% if  'img/' in product.image.name %}
+                     <a href="{{ product.image_url }}" target="_blank" rel="noopener">
+                        <img class="card-img-top img-fluid rounded-lg shadow-sm" 
+                            src="{{ STATIC_URL }}{{product.image}}"
+                            alt="{{ product.name }}">
+                    </a>
+                   {% else %}
+                        <img class="card-img-top img-fluid rounded-lg shadow-sm" 
+                            src="{{ STATIC_URL }}img/no-image.jpg" 
+                            alt="{{ product.name }}">
+                   {% endif %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
