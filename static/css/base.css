@@ -9,7 +9,12 @@ body {
     font-family: 'Lato';
 }
 
-/* ------------- landing carousel */
+.main-heading {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* ------------- Landing carousel */
 
 #hero-carousel {
     min-height: 300px;
@@ -23,7 +28,7 @@ body {
 
 .carousel-caption {
     top: 50%;
-    transform: translateY(-50%);
+    transform: translatex(+50%);
     bottom: initial;
 }
 
@@ -33,7 +38,8 @@ body {
     transform-style: preserve-3d;
 }
 
-/* from Bulma */
+
+/* -------------------- Navbar */
 .icon {
     align-items: center;
     display: inline-flex;
