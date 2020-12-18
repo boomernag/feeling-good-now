@@ -16,9 +16,9 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def product_detail(request, product_id):
+def product_details(request, product_id):
     """ A view to display single product details page """
-    product = get_object_or_404(all_products, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     context = {
         'product': product,
     }
@@ -27,8 +27,8 @@ def product_detail(request, product_id):
 
 def services(request):
     """ A view to display all of the services"""
-    services = Product.objects.all()
-    
+    services = Product.objects.filter(is_a_service=True)
+
     context = {
         'services': services,
     }
