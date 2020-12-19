@@ -9,10 +9,16 @@ body {
     font-family: 'Lato';
 }
 
+.logo {
+    height: 50px;
+}
+
 .main-heading {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+
 
 /* ------------- Landing carousel */
 
@@ -40,6 +46,10 @@ body {
 
 
 /* -------------------- Navbar */
+nav {
+    background: black;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -68,30 +78,144 @@ body {
     background: #000 !important;
 }
 
-/* ----------------------- Media Queries */
+/* Media query for medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
 
-/* Slightly larger container on x1 screens */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
+h1 {
+font-size: 2.5rem;
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
+h2 {
+font-size: 2rem;
+}
 
-    body {
-        height: calc(100vh - 116px);
-    }
+.landing-button{
+margin-top: 0 !important;
+}
+
+.main-nav-sticky {
+padding-top: 3.5rem;
+}
+
+.landing-text{
+left: 15%;
+top: 65%;
+}
+
+.landing-main-heading{
+font-size: 4rem;
+}
+
+.products-heading{
+font-size: 2.5rem;
+}
+
+main{
+margin-top:7.87rem;
+}
+
+.heading-events{
+font-size: 2.3rem;
+}
+
+.checkout-button{
+font-size: 0.8rem;
+}
+
+.container-messages {
+top: 7.75rem;
+right: 0.2rem;
+}
+
+.toast-header{
+font-size: 1.2rem;
+}
+
+.tab-content{
+box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+border-radius: .5rem;
+border-top: 0;
+}
+
+.products-btn{
+font-size: 0.8rem;
+}
+}
+
+/*Media query for large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+h2 {
+font-size: 2.3rem;
+}
+
+.container{
+max-width: 74rem !important;
+}
+
+.logo-navbar{
+height: 3.1rem;
+}
+
+.checkout-button{
+font-size: 0.9rem;
+}
+
+.btn-service{
+font-size: 1rem;
+}
+
+.navbar-brand{
+margin-right: 1rem;
+}
+
+main{
+margin-top:7.437rem;
+}
+
+.landing-text{
+text-align: left;
+left: 25%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+
+.landing-main-heading{
+font-size: 5.5rem;
+}
+
+.checkout-button{
+font-size: 1rem;
+}
+
+#card-element{
+width: 70%;
+}
+
+.nav-link-header{
+transition: all .15s ease-in-out;
+}
+
+.nav-link-header:hover{
+transform: scale(1.1);
+color: var(--lightgreen) !important;
+}
+
+.products-btn{
+font-size: 1rem;
+}
+}
+
+/* iPad Pro  and iPad landscape size Media queries */
+@media only screen and (min-width: 992px) and (max-width: 1366px)and (-webkit-min-device-pixel-ratio: 1.5){
+.landing-text {
+left: 45%;
+top: 60%;
+}
+
+.nav-item-header{
+margin-right: 1rem !important;
+}
+
+.nav-link-header{
+font-size: 0.8rem;
 }

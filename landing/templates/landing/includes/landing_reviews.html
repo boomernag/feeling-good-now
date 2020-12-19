@@ -1,17 +1,17 @@
-<div class="container reviews-container text-center border-bottom py-4" data-aos="fade-up" 
-    data-aos-duration="2000">
+{% load static %}
+
+<div class="container text-center border-bottom py-4">
     <h2 class="text-center pt-5 main-heading">What Our Customers Say:</h2>
-    <img src="{{ STATIC_URL }}icons/icon-heart.png" alt="icon-heart">
     <div id="reviews-carousel" class="carousel slide" data-ride="false" data-interval="false">
         <ol class="carousel-indicators text-black">
             <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
             <li data-target="#reviews-carousel" data-slide-to="1"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active carousel-item-review">
+            <div class="carousel-item active">
                 <div class="row mt-4">
                     <div class="col-sm-12 col-md-4 mb-3">
-                        <img src="{{ STATIC_URL }}img/landing/5.jpg" alt="person-giving-review" 
+                        <img src="{% static '/img/landing/5.jpg' %}" alt="person-giving-review" 
                             class="rounded-circle review-user-avatar">
                     </div>
                     <div class="col-sm-12 col-md-8 review-content">
@@ -27,7 +27,7 @@
             <div class="carousel-item carousel-item-review">
                 <div class="row mt-4">
                     <div class="col-sm-12 col-md-4 mb-3">
-                        <img src="{{ STATIC_URL }}img/landing/6.jpg" alt="review-giving-user" 
+                        <img src="{{ STATIC_ROOT }}6.jpg" alt="review-giving-user" 
                             class="rounded-circle review-user-avatar">
                     </div>
                     <div class="col-sm-12 col-md-8 review-content">

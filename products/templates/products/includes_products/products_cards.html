@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="col-md-auto">
         {% if  'img/' in product.image.name %}  
         <a href="{% url 'product_details' product.id %}">

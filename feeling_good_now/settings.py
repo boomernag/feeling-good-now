@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'landing',
     'products',
     'about',
+    'cart',
 ]
 
 MIDDLEWARE = [
