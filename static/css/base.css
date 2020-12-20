@@ -78,6 +78,23 @@ nav {
     background: #000 !important;
 }
 
+/* ----------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.cutom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* Media query for medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
 
