@@ -205,6 +205,12 @@ font-size: 1rem;
 }
 }
 
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* iPad Pro  and iPad landscape size Media queries */
 @media only screen and (min-width: 992px) and (max-width: 1366px)and (-webkit-min-device-pixel-ratio: 1.5){
 .landing-text {
